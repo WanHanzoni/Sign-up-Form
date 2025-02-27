@@ -23,38 +23,45 @@
 
             You <em>know</em> you want to.</div>
         <div class="form">Let's do this!
-            <form action="path" method="post">
+            <form id="signupForm" action="path" method="post">
                 <div>
                     <label for="firstName">FIRST NAME</label>
-                    <input type="text" name="firstName" id="firstName" value="Thor">
+                    <input type="text" name="firstName" id="firstName" placeholder="Thor">
                 </div>
                 <div>
                     <label for="lastName">LAST NAME</label>
-                    <input type="text" name="lastName" id="lastName" value="Odinson">
+                    <input type="text" name="lastName" id="lastName" placeholder="Odinson">
                 </div>
                 <div>
                     <label for="email">EMAIL</label>
-                    <input type="text" name="email" id="email" value="">
+                    <input type="email" name="email" id="email" placeholder="">
                 </div>
                 <div>
                     <label for="phoneNumber">PHONE NUMBER</label>
-                    <input type="text" name="phoneNumber" id="phoneNumber" value="">
+                    <input type="text" name="phoneNumber" id="phoneNumber" placeholder="">
                 </div>
                 <div>
                     <label for="passWord">PASSWORD</label>
-                    <input type="text" name="passWord" id="passWord" value="">
+                    <input type="password" name="passWord" id="passWord" placeholder="">
                 </div>
                 <div>
                     <label for="confirmPassword">CONFIRM PASSWORD</label>
-                    <input type="text" name="confirmPassword" id="confirmPassword" value="">
+                    <input type="password" name="confirmPassword" id="confirmPassword" placeholder="">
                 </div>
 
             </form>
 
         </div>
-        <div><button>Create Account</button>
+        <div>
+            <button type="button" id="submitButton">Create Account</button>
             <div>Already have an account? <a href="">Log in</a></div>
         </div>
+
+        <script>
+            document.getElementById("submitButton").addEventListener("click", function () {
+                document.getElementById("signupForm").submit();
+            });
+        </script>
     </div>
 </body>
 
